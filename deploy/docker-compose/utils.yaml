@@ -132,7 +132,6 @@ services:
       - "./deploy/build/gamechanger-web/backend/node_app/init/:/tmp/sql/:Z"
     command:
       - |
-        psql -f /tmp/sql/pop_mini_RE.sql
         psql -f /tmp/sql/create_admins.sql
     networks:
       - app-net
