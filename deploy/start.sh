@@ -31,7 +31,10 @@ function main() {
   compose_wrapper run -- _update_primary_clone_config
 
   # start up remaining services
-  compose_wrapper up -d -- web ml-api
+  compose_wrapper up -d -- ml-api
+  compose_wrapper up -d -- mysql
+  compose_wrapper up -d -- matomo
+  compose_wrapper up -d -- web
   
   # wait until remaining services are up
   compose_wrapper run -- _web_wait_until_ready

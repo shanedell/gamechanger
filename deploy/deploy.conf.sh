@@ -6,6 +6,8 @@ DEPLOY_BUILD_DIR="${_repo_dir}/deploy/build"
 DEPLOY_VAR_DIR="${_repo_dir}/deploy/var"
 DEPLOY_COMPOSE_DIR="${_repo_dir}/deploy/docker-compose"
 
+export API_HOST="${API_HOST:-localhost}"
+
 unset _script_dir
 unset _repo_dir
 
